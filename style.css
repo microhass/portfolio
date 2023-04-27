@@ -1,5 +1,5 @@
 /* ============ Imports ============== */
-@import url('https://fonts.googleapis.com/css2?family=Crete+Round&family=Poppins&family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crete+Round&family=Inter&family=Poppins&family=Roboto:wght@700&display=swap');
 
 /* ============ Variables ============== */
 :root {
@@ -53,8 +53,7 @@ header .logo {
 
 /* ============ Hero Section ============== */
 .hero-section {
-  background:
-    var(--hero-backgroung-color)
+  background: var(--hero-backgroung-color)
     url('./images/hero-image.svg') no-repeat right bottom;
   min-height: 92vh;
   padding: 5%;
@@ -99,6 +98,8 @@ header .logo {
 /* ============ Works Section ============== */
 .works {
   display: flex;
+  /* grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr); */
   flex-direction: column;
   align-items: center;
   padding: 10% 5%;
@@ -118,4 +119,91 @@ header .logo {
   width: 100%;
   height: 1px;
   background-color: #212121;
+}
+
+.projects {
+  display: grid;
+  gap: 2rem;
+}
+
+.project {
+  position: relative;
+  color: #fff;
+}
+
+.project-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.first-project.project .project-text h3 {
+  color: #091e42;
+  font-family: 'Crete Round', serif;
+}
+
+.first-project.project .project-text p {
+  color: #091e42;
+}
+
+.project .project-text h3 {
+  /* color: #fff; */
+  font-family: 'Crete Round', serif;
+  font-size: 32px;
+  line-height: 44px;
+}
+
+.project .project-text p {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.other-projects .project-image {
+  width: 100%;
+}
+
+.other-projects .project-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  padding-bottom: 0;
+}
+
+.other-projects h3,
+.other-projects p,
+.other-projects ul {
+  padding: 1% 5%;
+}
+
+.project-text .languages {
+  display: flex;
+  gap: 4%;
+}
+
+.languages li {
+  background-color: rgba(255, 255, 255, 0.24);
+  padding: 3% 4%;
+  font-size: 15px;
+}
+
+.first-project .languages li {
+  color: #091e42;
+  border: 1px solid #8993A4
+}
+
+.project-text button {
+  background-color: #ff6b00;
+  width: 100%;
+  width: inherit;
+  border: 1px solid transparent;
+  color: #fff;
+  padding: 4%;
+  margin-top: 0.5rem;
+  font-size: 17px;
+}
+
+.first-project .project-text button {
+  width: fit-content;
 }
