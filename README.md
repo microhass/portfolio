@@ -9,7 +9,7 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 \[Hello Microverse\] ](#-hello-microverse-)
+- [📖 \[Portfolio Project\] ](#-portfolio-project-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -19,7 +19,6 @@
     - [Setup](#setup)
     - [Install](#install)
     - [Usage](#usage)
-    - [Run tests](#run-tests)
     - [Deployment](#deployment)
   - [👥 Authors ](#-authors-)
   - [🔭 Future Features ](#-future-features-)
@@ -30,7 +29,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Hello Microverse] <a name="about-project"></a>
+# 📖 [Portfolio Project] <a name="about-project"></a>
 
 **[Portfolio-project]** is the second project in the microverse fulstack programme. In involves creating a proffessional looking portfolio using HTML and CSS only, from a provided figma design template.
 
@@ -59,7 +58,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link]()
+- [Live Demo Link](https://microhass.github.io/portfolio/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -98,10 +97,6 @@ Install this project with:
 ### Usage
 
 To run the project, open it in your favourite editor and start a live server from the index.html
-
-### Run tests
-
-N/A
 
 ### Deployment
 
