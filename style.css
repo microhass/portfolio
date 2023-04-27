@@ -41,6 +41,10 @@ header {
 header .logo {
   font-size: larger;
 }
+
+.menu-icon:hover {
+  cursor: pointer;
+}
 /* ============ End Header ============== */
 
 /* ============ Hero Section ============== */
