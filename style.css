@@ -45,6 +45,7 @@ header .logo {
 .menu-icon:hover {
   cursor: pointer;
 }
+
 /* ============ End Header ============== */
 
 /* ============ Hero Section ============== */
@@ -94,6 +95,3 @@ header .logo {
 }
 
 /* ============ End Hero Section ============== */
-
-@media (min-width: 375px) {
-}
