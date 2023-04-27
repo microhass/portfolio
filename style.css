@@ -1,28 +1,95 @@
+/* ============ Imports ============== */
+@import url('https://fonts.googleapis.com/css2?family=Crete+Round&family=Poppins&family=Roboto:wght@700&display=swap');
+
+/* ============ Variables ============== */
 :root {
   --header-background-color: #3c3a39;
   --hero-backgroung-color: #1c1a19;
   --intro-background-color: #ff6b00;
 }
 
+/* ============ General Resets ============== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+a,
+a:link,
+a:active,
+a:visited {
+  text-decoration: none;
+  color: unset;
+}
+
 body {
   color: #fff;
 }
 
+/* ============ Header ============== */
 header {
   background-color: var(--header-background-color);
-  min-height: 10vh;
+  min-height: 8vh;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
 }
 
+header .logo {
+  font-size: larger;
+}
+/* ============ End Header ============== */
+
+/* ============ Hero Section ============== */
 .hero-section {
   background-color: var(--hero-backgroung-color);
-  min-height: 90vh;
+  min-height: 92vh;
+  padding: 5%;
+  padding-right: 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
 }
+
+.hero-section .hero-intro {
+  color: var(--intro-background-color);
+  font-size: 56px;
+  text-transform: capitalize;
+  font-weight: 400;
+  font-family: 'Crete Round', serif;
+}
+
+.hero-section h4 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  color: #fff5e1;
+  font-weight: 700;
+}
+
+.hero-description {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+}
+
+.hero-icons {
+  width: fit-content;
+  display: flex;
+  gap: 20px;
+  padding: 2% 3%;
+}
+
+.hero-image {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+/* ============ End Hero Section ============== */
 
 @media (min-width: 375px) {
 }
