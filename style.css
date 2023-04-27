@@ -27,6 +27,20 @@ ul li {
   list-style-type: none;
 }
 
+p {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Crete Round', serif;
+}
+
 /* ============ End General Resets ============== */
 
 /* ============ Header ============== */
@@ -71,7 +85,6 @@ header .logo {
   font-size: 56px;
   text-transform: capitalize;
   font-weight: 400;
-  font-family: 'Crete Round', serif;
 }
 
 .hero-section h4 {
@@ -83,7 +96,6 @@ header .logo {
 
 .hero-description {
   font-family: 'Poppins', sans-serif;
-  font-size: 16px;
 }
 
 .hero-icons {
@@ -107,7 +119,6 @@ header .logo {
 
 .works-title {
   color: #1c1a19;
-  font-family: 'Crete Round', serif;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -115,7 +126,7 @@ header .logo {
   line-height: 52px;
 }
 
-.works-title .underline {
+.underline {
   width: 100%;
   height: 1px;
   background-color: #212121;
@@ -139,7 +150,6 @@ header .logo {
 
 .first-project.project .project-text h3 {
   color: #091e42;
-  font-family: 'Crete Round', serif;
 }
 
 .first-project.project .project-text p {
@@ -147,15 +157,11 @@ header .logo {
 }
 
 .project .project-text h3 {
-  /* color: #fff; */
-  font-family: 'Crete Round', serif;
   font-size: 32px;
   line-height: 44px;
 }
 
 .project .project-text p {
-  font-family: 'Inter', sans-serif;
-  font-size: 16px;
   line-height: 24px;
 }
 
@@ -190,10 +196,11 @@ header .logo {
 
 .first-project .languages li {
   color: #091e42;
-  border: 1px solid #8993A4
+  border: 1px solid #8993a4;
 }
 
-.project-text button {
+.project-text button,
+button {
   background-color: #ff6b00;
   width: 100%;
   width: inherit;
@@ -207,3 +214,67 @@ header .logo {
 .first-project .project-text button {
   width: fit-content;
 }
+
+/* ============ End Works Section ============== */
+
+/* ============ About Section ============== */
+
+.about {
+  background-color: #1c1a19;
+}
+
+.about-me {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 5%;
+  background: var(--hero-backgroung-color)
+    url('./images/about-me-illustration.svg') no-repeat right bottom;
+  /* padding-bottom: 13rem; */
+  min-height: 80vh;
+  padding-top: 30vw;
+}
+
+.about-me h2 {
+  font-size: 70px;
+  color: #ff6b00;
+}
+
+.about-me p {
+  color: #f4f5f7;
+  line-height: 24px;
+}
+
+.about-me button {
+  align-self: flex-start;
+}
+
+.about .underline {
+  color: #fff;
+}
+
+.skills {
+  color: #fff;
+  font-size: 22px;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  align-items: center;
+  padding: 10rem 0;
+}
+
+.skills .title h4 {
+  font-size: 32px;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 1.4rem;
+}
+
+.skills ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* ============ End About Section ============== */
