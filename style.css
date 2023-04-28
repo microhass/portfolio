@@ -278,3 +278,45 @@ button {
 }
 
 /* ============ End About Section ============== */
+
+/* ============ Contact Section ============== */
+
+.contact {
+  padding: 5%;
+}
+
+.contact p {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 44px;
+  color: #172b4d;
+  text-align: center;
+  padding: 1%;
+  margin: 2rem 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+form input {
+  border: none;
+  border-bottom: 1px solid #dbd8d7;
+  padding: 0.6rem;
+}
+
+form textarea {
+  padding: 3%;
+  color: #3c3a39;
+  background: #fbf8f7;
+  border: 1px solid #fbf8f7;
+}
+
+form button {
+  align-self: center;
+  
+}
+
+/* ============ End COntact Section ============== */
