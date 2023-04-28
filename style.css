@@ -13,6 +13,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
 }
 
 a,
@@ -39,6 +40,17 @@ h4,
 h5,
 h6 {
   font-family: 'Crete Round', serif;
+}
+
+button:hover {
+  cursor: pointer;
+  color: #ff6b00;
+  background-color: #fff5e1;
+}
+
+button:disabled {
+  color: #5b5957;
+  background-color: #f4f1f0;
 }
 
 /* ============ End General Resets ============== */
@@ -250,7 +262,9 @@ button {
 }
 
 .about .underline {
-  color: #fff;
+  background-color: #fff;
+  margin: 5px auto;
+  width: 90%;
 }
 
 .skills {
@@ -264,10 +278,31 @@ button {
   padding: 10rem 0;
 }
 
+.skills .title {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+  justify-content: center;
+}
+
 .skills .title h4 {
   font-size: 32px;
   font-family: 'Roboto', sans-serif;
   margin-bottom: 1.4rem;
+}
+
+.skills .title .shape {
+  height: 18px;
+  width: 18px;
+  background-color: #ff6b00;
+}
+
+.lang .shape {
+  transform: rotate(45deg);
+}
+
+.skill .shape {
+  border-radius: 50%;
 }
 
 .skills ul {
