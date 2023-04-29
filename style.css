@@ -1,5 +1,5 @@
 /* ============ Imports ============== */
-@import url('https://fonts.googleapis.com/css2?family=Crete+Round&family=Poppins&family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crete+Round&family=Inter&family=Poppins&family=Roboto:wght@700&display=swap');
 
 /* ============ Variables ============== */
 :root {
@@ -13,6 +13,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
 }
 
 a,
@@ -25,6 +26,46 @@ a:visited {
 
 ul li {
   list-style-type: none;
+}
+
+p {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Crete Round', serif;
+}
+
+button {
+  background-color: #ff6b00;
+  width: 100%;
+  width: inherit;
+  border: 1px solid transparent;
+  color: #fff;
+  padding: 4%;
+  margin-top: 0.5rem;
+  font-size: 17px;
+}
+
+form button {
+  align-self: center;
+}
+
+button:hover {
+  cursor: pointer;
+  color: #ff6b00;
+  background-color: #fff5e1;
+}
+
+button:disabled {
+  color: #5b5957;
+  background-color: #f4f1f0;
 }
 
 /* ============ End General Resets ============== */
@@ -72,7 +113,6 @@ header .logo {
   font-size: 56px;
   text-transform: capitalize;
   font-weight: 400;
-  font-family: 'Crete Round', serif;
 }
 
 .hero-section h4 {
@@ -84,7 +124,6 @@ header .logo {
 
 .hero-description {
   font-family: 'Poppins', sans-serif;
-  font-size: 16px;
 }
 
 .hero-icons {
@@ -99,6 +138,9 @@ header .logo {
 /* ============ Works Section ============== */
 .works {
   display: flex;
+
+  /* grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr); */
   flex-direction: column;
   align-items: center;
   padding: 10% 5%;
@@ -106,16 +148,256 @@ header .logo {
 
 .works-title {
   color: #1c1a19;
-  font-family: 'Crete Round', serif;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  margin-bottom: 2rem;
-  line-height: 52px;
+  gap: 2rem;
+  margin: 3rem 0 4rem 0;
 }
 
-.works-title .underline {
+.works-title h2 {
+  font-size: 40px;
+  line-height: 52px;
+  font-weight: 400;
+}
+
+.underline {
   width: 100%;
   height: 1px;
   background-color: #212121;
 }
+
+.projects {
+  display: grid;
+  gap: 2rem;
+}
+
+.project {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+
+.project-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.other-projects h3,
+.other-projects p,
+.other-projects ul {
+  padding: 1% 5%;
+}
+
+.project .project-text h3 {
+  font-size: 32px;
+  line-height: 44px;
+  font-weight: 400;
+}
+
+.contact p {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 44px;
+  color: #172b4d;
+  text-align: center;
+  padding: 1%;
+  margin: 2rem 0;
+}
+
+.about-me p {
+  color: #f4f5f7;
+  line-height: 24px;
+}
+
+.project .project-text p {
+  line-height: 24px;
+}
+
+.other-projects .project-image {
+  width: 100%;
+}
+
+.other-projects .project-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  padding-bottom: 0;
+}
+
+.first-project.project .project-text h3 {
+  color: #091e42;
+  margin-top: 1rem;
+}
+
+.first-project.project .project-text p {
+  color: #091e42;
+}
+
+.project-text .languages {
+  display: flex;
+  gap: 4%;
+}
+
+.languages li {
+  background-color: rgba(255, 255, 255, 0.24);
+  padding: 3% 4%;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.first-project .languages li {
+  color: #091e42;
+  border: 1px solid #8993a4;
+}
+
+.about-me button {
+  align-self: flex-start;
+}
+
+.first-project .project-text button {
+  width: fit-content;
+}
+
+.project-text button:hover {
+  cursor: pointer;
+  color: #ff6b00;
+  background-color: #fff5e1;
+}
+
+/* ============ End Works Section ============== */
+
+/* ============ About Section ============== */
+
+.about {
+  background-color: #1c1a19;
+  margin-top: 3rem;
+}
+
+.about-me {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 5%;
+  background:
+    var(--hero-backgroung-color)
+    url('./images/about-me-illustration.svg') no-repeat right bottom;
+
+  /* padding-bottom: 13rem; */
+  min-height: 80vh;
+  padding-top: 30vw;
+}
+
+.about-me h2 {
+  font-size: 70px;
+  color: #ff6b00;
+  font-weight: 400;
+  letter-spacing: 0.37px;
+  line-height: 88px;
+}
+
+footer .underline {
+  background-color: #dfe1e6;
+}
+
+.about .underline {
+  background-color: #fff;
+  margin: 5px auto;
+  width: 90%;
+}
+
+.skills {
+  color: #fff;
+  font-size: 22px;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  align-items: center;
+  padding: 10rem 0;
+}
+
+.skills .title {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.skills .title h4 {
+  font-size: 32px;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 1.4rem;
+}
+
+.lang .shape {
+  transform: rotate(45deg);
+}
+
+.skill .shape {
+  border-radius: 50%;
+}
+
+.skills .title .shape {
+  height: 18px;
+  width: 18px;
+  background-color: #ff6b00;
+}
+
+.skills ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* ============ End About Section ============== */
+
+/* ============ Contact Section ============== */
+
+.contact {
+  padding: 5%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+form input {
+  border: none;
+  border-bottom: 1px solid #dbd8d7;
+  padding: 0.6rem;
+}
+
+form textarea {
+  padding: 3%;
+  color: #3c3a39;
+  background: #fbf8f7;
+  border: 1px solid #fbf8f7;
+  font-style: italic;
+}
+
+/* ============ End Contact Section ============== */
+
+/* ============ Footer Section ============== */
+
+footer {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+footer .footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 2% 3%;
+}
+
+/* ============ End Footer Section ============== */
