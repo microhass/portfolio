@@ -510,10 +510,10 @@ footer .footer-icons {
     background:
       var(--hero-backgroung-color)
       url('./images/desktop/hero-image.svg') no-repeat right bottom;
-      background-position: 50vw;
+    background-position: 50vw;
     min-height: 92vh;
     padding: 2%;
-    padding-right: 10%;
+    padding-right: 5%;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
@@ -522,28 +522,30 @@ footer .footer-icons {
   }
 
   .hero-section > div {
-    width: 45%;
+    width: 60%;
     display: flex;
     flex-direction: column;
     gap: 1rem;
   }
 
   .hero-section .hero-intro {
-    font-size: 72px;
-    line-height: 82px;
+    font-size: 6vw;
+
+    /* line-height: 82px; */
   }
 
   .hero-section h4 {
     font-family: 'Inter', sans-serif;
-    font-size: 32px;
-    line-height: 44px;
+    font-size: 3vw;
+
+    /* line-height: 44px; */
     font-weight: 500;
   }
 
   .hero-description {
     font-family: 'Inter', sans-serif;
-    font-size: 20px;
-    line-height: 32px;
+    font-size: 2vw;
+    line-height: 2.8vw;
     font-weight: 400;
   }
 
@@ -557,7 +559,7 @@ footer .footer-icons {
 
   /* ============ Works Section ============== */
   .works {
-    padding: 10%;
+    padding: 5%;
   }
 
   .works-title {
@@ -570,16 +572,17 @@ footer .footer-icons {
 
   .works-title h2 {
     width: fit-content;
+    font-size: 3.5vw;
   }
 
   .underline {
-    width: 65%;
+    width: 60%;
   }
 
   .projects .others {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
     gap: 1rem;
     row-gap: 3rem;
   }
@@ -601,36 +604,40 @@ footer .footer-icons {
   }
 
   .about-me p {
-    font-size: 20px;
-    line-height: 32px;
+    font-size: 2vw;
+    line-height: 3vw;
   }
 
   .contact p {
     font-weight: 700;
-    font-size: 40px;
-    line-height: 52px;
+    font-size: 2.4vw;
+    line-height: 4vw;
+  }
+
+
+
+  .project .project-text p {
+    font-size: 2vw;
+    line-height: 2.8vw;
   }
 
   .other-projects .project-text p {
-    font-size: 17px;
-    line-height: 24px;
+    font-size: 1.8vw;
+    line-height: 2.5vw;
     font-weight: 400;
   }
 
-  .project .project-text p {
-    font-size: 20px;
-    line-height: 28px;
+
+
+  .project .project-text h3 {
+    font-size: 3vw;
+    line-height: 3vw;
+    font-weight: 400;
   }
 
   .other-projects .project-text h3 {
-    font-size: 32px;
-    line-height: 44px;
-    font-weight: 400;
-  }
-
-  .project .project-text h3 {
-    font-size: 40px;
-    line-height: 52px;
+    font-size: 4vw;
+    line-height: 4.9vw;
     font-weight: 400;
   }
 
@@ -662,6 +669,10 @@ footer .footer-icons {
       );
   }
 
+  .first-project .project-image img {
+    width: 40vw;
+  }
+
   .first-project.project .project-text h3 {
     margin-top: 0;
   }
@@ -675,11 +686,12 @@ footer .footer-icons {
   }
 
   .about-me {
-    padding: 1% 10%;
+    padding: 1% 5%;
     background:
       var(--hero-backgroung-color)
       url('./images/desktop/illustration-about\ me.svg') no-repeat
       right bottom;
+    background-position: 60vw;
     min-height: 40vh;
     min-height: fit-content;
     padding-top: 8vw;
@@ -687,8 +699,8 @@ footer .footer-icons {
   }
 
   .about-me h2 {
-    font-size: 72px;
-    line-height: 82px;
+    font-size: 5.5vw;
+    line-height: 8vw;
   }
 
   footer .underline {
@@ -697,14 +709,14 @@ footer .footer-icons {
 
   .about .underline {
     margin: 8rem auto;
-    width: 80%;
+    width: 90%;
   }
 
   .skills {
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 8rem 10%;
+    padding: 8rem 5%;
     padding-top: 0;
   }
 
@@ -714,12 +726,13 @@ footer .footer-icons {
 
   .skills .title h4 {
     font-family: 'Inter', sans-serif;
-    line-height: 44px;
+    font-size: 3vw;
+    line-height: 7vw;
   }
 
   .skills ul li {
-    font-size: 22px;
-    line-height: 43px;
+    font-size: 2.4vw;
+    line-height: 4vw;
   }
 
   .skills ul {
@@ -731,9 +744,9 @@ footer .footer-icons {
   /* ============ Contact Section ============== */
 
   .contact {
-    padding: 10%;
+    padding: 5%;
     display: flex;
-    gap: 4rem;
+    gap: 2vw;
   }
 
   form {
@@ -741,7 +754,7 @@ footer .footer-icons {
   }
 
   form input {
-    padding: 1rem;
+    padding: 1vw;
   }
 
   /* ============ End Contact Section ============== */
@@ -915,15 +928,17 @@ footer .footer-icons {
     line-height: 52px;
   }
 
-  .other-projects .project-text p {
-    font-size: 17px;
-    line-height: 24px;
-    font-weight: 400;
-  }
+
 
   .project .project-text p {
     font-size: 20px;
     line-height: 28px;
+  }
+
+  .other-projects .project-text p {
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: 400;
   }
 
   .other-projects .project-text h3 {
@@ -1005,15 +1020,7 @@ footer .footer-icons {
   }
 
   .skills {
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
     padding: 8rem 10%;
-    padding-top: 0;
-  }
-
-  .skills .title {
-    justify-content: flex-start;
   }
 
   .skills .title h4 {
@@ -1026,9 +1033,6 @@ footer .footer-icons {
     line-height: 43px;
   }
 
-  .skills ul {
-    align-items: flex-start;
-  }
 
   /* ============ End About Section ============== */
 
