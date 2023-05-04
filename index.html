@@ -8,6 +8,7 @@
       content="width=device-width, initial-scale=1.0"
     />
     <link rel="stylesheet" href="style.css" />
+    <script src="./app.js" defer async></script>
     <title>Portfolio | Microverse</title>
   </head>
   <body>
@@ -17,20 +18,43 @@
         <div class="menu-icon">
           <img src="./images/menu-icon.svg" alt="Menu bars" />
         </div>
+        <div class="menu">
+          <div class="close-menu">
+            <img src="./images/cancel.svg" alt="Cancel" />
+          </div>
+          <ul>
+            <li>
+              <a href="#">Portfolio</a>
+            </li>
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="./images/mail.svg" alt="Mail"
+              /></a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
     <section class="hero-section">
-      <h1 class="hero-intro">
-        hey there. <br />
-        I'm Hassan.
-      </h1>
-      <h4>I'm a Software Developer</h4>
-      <p class="hero-description">
-        I can help you build a product , feature or website Look
-        through some of my work and experience! If you like what you
-        see and have a project you need coded, don’t hesitate to
-        contact me.
-      </p>
+      <div>
+        <h1 class="hero-intro">
+          hey there. <br />
+          I'm Hassan.
+        </h1>
+        <h4>I'm a Software Developer</h4>
+        <p class="hero-description">
+          I can help you build a product , feature or website Look
+          through some of my work and experience! If you like what you
+          see and have a project you need coded,<br />
+          don’t hesitate to contact me.
+        </p>
+      </div>
       <ul class="hero-icons">
         <li>
           <a href="https://github.com/hassanShakur">
@@ -70,18 +94,24 @@
       <div class="projects">
         <div class="first-project project">
           <div class="project-image">
-            <img
-              src="./images/works-illustration.svg"
-              alt="Works ilustration"
-            />
+            <picture>
+              <source
+                media="(min-width: 768px)"
+                srcset="./images/desktop/works-illustration.svg"
+              />
+              <img
+                src="./images/works-illustration.svg"
+                alt="Works ilustration"
+              />
+            </picture>
           </div>
           <div class="project-text">
             <h3>Multi-Post Stories</h3>
             <p>
               A daily selection of privately personalized reads; no
-              accounts or sign-ups required. has been the industry's
-              standard dummy text ever since the 1500s, when an
-              unknown printer took a standard dummy text.
+              accounts or sign-ups required. This has been the
+              industry's standard dummy text ever since the 1500s,
+              when an unknown printer took a standard dummy text.
             </p>
             <ul class="languages">
               <li>CSS</li>
@@ -93,142 +123,144 @@
           </div>
         </div>
 
-        <div class="project other-projects">
-          <div class="project-image">
-            <img
-              src="./images/project-image.svg"
-              alt="Works ilustration"
-              class="project-image"
-            />
+        <div class="others">
+          <div class="project other-projects">
+            <div class="project-image">
+              <img
+                src="./images/desktop/project-1.svg"
+                alt="Works ilustration"
+                class="project-image"
+              />
+            </div>
+            <div class="project-text">
+              <h3>Profesional Art Printing Data</h3>
+              <p>
+                A daily selection of privately personalized reads; no
+                accounts or sign-ups required. Has been the industry's
+                standard.
+              </p>
+              <ul class="languages">
+                <li>HTML</li>
+                <li>Bootstrap</li>
+                <li>Ruby</li>
+              </ul>
+              <button type="button">See project</button>
+            </div>
           </div>
-          <div class="project-text">
-            <h3>Profesional Art Printing Data</h3>
-            <p>
-              A daily selection of privately personalized reads; no
-              accounts or sign-ups required. Has been the industry's
-              standard.
-            </p>
-            <ul class="languages">
-              <li>HTML</li>
-              <li>Bootstrap</li>
-              <li>Ruby</li>
-            </ul>
-            <button type="button">See project</button>
+          <div class="project other-projects">
+            <div class="project-image">
+              <img
+                src="./images/desktop/project-2.svg"
+                alt="Works ilustration"
+                class="project-image"
+              />
+            </div>
+            <div class="project-text">
+              <h3>Profesional Art Printing Data</h3>
+              <p>
+                A daily selection of privately personalized reads; no
+                accounts or sign-ups required. Has been the industry's
+                standard.
+              </p>
+              <ul class="languages">
+                <li>HTML</li>
+                <li>Bootstrap</li>
+                <li>Ruby</li>
+              </ul>
+              <button type="button">See project</button>
+            </div>
           </div>
-        </div>
-        <div class="project other-projects">
-          <div class="project-image">
-            <img
-              src="./images/project-image.svg"
-              alt="Works ilustration"
-              class="project-image"
-            />
+          <div class="project other-projects">
+            <div class="project-image">
+              <img
+                src="./images/desktop/project-3.svg"
+                alt="Works ilustration"
+                class="project-image"
+              />
+            </div>
+            <div class="project-text">
+              <h3>Profesional Art Printing Data</h3>
+              <p>
+                A daily selection of privately personalized reads; no
+                accounts or sign-ups required. Has been the industry's
+                standard.
+              </p>
+              <ul class="languages">
+                <li>HTML</li>
+                <li>Bootstrap</li>
+                <li>Ruby</li>
+              </ul>
+              <button type="button">See project</button>
+            </div>
           </div>
-          <div class="project-text">
-            <h3>Profesional Art Printing Data</h3>
-            <p>
-              A daily selection of privately personalized reads; no
-              accounts or sign-ups required. Has been the industry's
-              standard.
-            </p>
-            <ul class="languages">
-              <li>HTML</li>
-              <li>Bootstrap</li>
-              <li>Ruby</li>
-            </ul>
-            <button type="button">See project</button>
+          <div class="project other-projects">
+            <div class="project-image">
+              <img
+                src="./images/desktop/project-1.svg"
+                alt="Works ilustration"
+                class="project-image"
+              />
+            </div>
+            <div class="project-text">
+              <h3>Profesional Art Printing Data</h3>
+              <p>
+                A daily selection of privately personalized reads; no
+                accounts or sign-ups required. Has been the industry's
+                standard.
+              </p>
+              <ul class="languages">
+                <li>HTML</li>
+                <li>Bootstrap</li>
+                <li>Ruby</li>
+              </ul>
+              <button type="button">See project</button>
+            </div>
           </div>
-        </div>
-        <div class="project other-projects">
-          <div class="project-image">
-            <img
-              src="./images/project-image.svg"
-              alt="Works ilustration"
-              class="project-image"
-            />
+          <div class="project other-projects">
+            <div class="project-image">
+              <img
+                src="./images/desktop/project-2.svg"
+                alt="Works ilustration"
+                class="project-image"
+              />
+            </div>
+            <div class="project-text">
+              <h3>Profesional Art Printing Data</h3>
+              <p>
+                A daily selection of privately personalized reads; no
+                accounts or sign-ups required. Has been the industry's
+                standard.
+              </p>
+              <ul class="languages">
+                <li>HTML</li>
+                <li>Bootstrap</li>
+                <li>Ruby</li>
+              </ul>
+              <button type="button">See project</button>
+            </div>
           </div>
-          <div class="project-text">
-            <h3>Profesional Art Printing Data</h3>
-            <p>
-              A daily selection of privately personalized reads; no
-              accounts or sign-ups required. Has been the industry's
-              standard.
-            </p>
-            <ul class="languages">
-              <li>HTML</li>
-              <li>Bootstrap</li>
-              <li>Ruby</li>
-            </ul>
-            <button type="button">See project</button>
-          </div>
-        </div>
-        <div class="project other-projects">
-          <div class="project-image">
-            <img
-              src="./images/project-image.svg"
-              alt="Works ilustration"
-              class="project-image"
-            />
-          </div>
-          <div class="project-text">
-            <h3>Profesional Art Printing Data</h3>
-            <p>
-              A daily selection of privately personalized reads; no
-              accounts or sign-ups required. Has been the industry's
-              standard.
-            </p>
-            <ul class="languages">
-              <li>HTML</li>
-              <li>Bootstrap</li>
-              <li>Ruby</li>
-            </ul>
-            <button type="button">See project</button>
-          </div>
-        </div>
-        <div class="project other-projects">
-          <div class="project-image">
-            <img
-              src="./images/project-image.svg"
-              alt="Works ilustration"
-              class="project-image"
-            />
-          </div>
-          <div class="project-text">
-            <h3>Profesional Art Printing Data</h3>
-            <p>
-              A daily selection of privately personalized reads; no
-              accounts or sign-ups required. Has been the industry's
-              standard.
-            </p>
-            <ul class="languages">
-              <li>HTML</li>
-              <li>Bootstrap</li>
-              <li>Ruby</li>
-            </ul>
-            <button type="button">See project</button>
-          </div>
-        </div>
-        <div class="project other-projects">
-          <div class="project-image">
-            <img
-              src="./images/project-image.svg"
-              alt="Works ilustration"
-              class="project-image"
-            />
-          </div>
-          <div class="project-text">
-            <h3>Profesional Art Printing Data</h3>
-            <p>
-              A daily selection of privately personalized reads; no
-              accounts or sign-ups required. Has been the industry's
-              standard.
-            </p>
-            <ul class="languages">
-              <li>HTML</li>
-              <li>Bootstrap</li>
-              <li>Ruby</li>
-            </ul>
-            <button type="button">See project</button>
+          <div class="project other-projects">
+            <div class="project-image">
+              <img
+                src="./images/desktop/project-3.svg"
+                alt="Works ilustration"
+                class="project-image"
+              />
+            </div>
+            <div class="project-text">
+              <h3>Profesional Art Printing Data</h3>
+              <p>
+                A daily selection of privately personalized reads; no
+                accounts or sign-ups required. Has been the industry's
+                standard.
+              </p>
+              <ul class="languages">
+                <li>HTML</li>
+                <li>Bootstrap</li>
+                <li>Ruby</li>
+              </ul>
+              <button type="button">See project</button>
+            </div>
           </div>
         </div>
       </div>
@@ -269,6 +301,7 @@
             <li>Ruby on Rails</li>
             <li>RSpec</li>
             <li>Capybara</li>
+            <li>Selenium</li>
           </ul>
         </li>
         <li class="skill">
