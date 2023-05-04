@@ -65,6 +65,7 @@ button:hover {
   cursor: pointer;
   color: #ff6b00;
   background-color: #fff5e1;
+  transition: all 1.2s ease-in-out;
 }
 
 button:disabled {
@@ -182,6 +183,10 @@ header .logo {
   display: flex;
   gap: 20px;
   padding: 2% 3%;
+}
+
+.hero-icons:hover {
+  transform: translateX(50px);
 }
 
 /* ============ End Hero Section ============== */
