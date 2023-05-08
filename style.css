@@ -555,6 +555,14 @@ footer .footer-icons {
     padding: 2% 3%;
   }
 
+  .first-project .project-image img {
+    width: 40vw;
+  }
+
+  .hero-icons li a img:hover {
+    transform: translateX(10px);
+  }
+
   /* ============ End Hero Section ============== */
 
   /* ============ Works Section ============== */
@@ -665,9 +673,7 @@ footer .footer-icons {
       );
   }
 
-  .first-project .project-image img {
-    width: 40vw;
-  }
+
 
   .first-project.project .project-text h3 {
     margin-top: 0;
