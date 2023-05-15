@@ -1,6 +1,7 @@
 const menuIcon = document.querySelector('.menu-icon');
 const closeMenuIcon = document.querySelector('.close-menu');
 const menu = document.querySelector('.menu');
+const menuLinks = document.querySelectorAll('.menu ul li');
 
 menuIcon.addEventListener('click', () => {
   menu.classList.add('show-menu');
@@ -11,3 +12,8 @@ closeMenuIcon.addEventListener('click', () => {
   menu.classList.remove('show-menu');
   document.body.classList.remove('menu-open');
 });
+
+[...menuLinks].forEach((link) => link.addEventListener('click', () => {
+  menu.classList.remove('show-menu');
+  document.body.classList.remove('menu-open');
+}));
