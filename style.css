@@ -137,6 +137,14 @@ body.menu-open {
   padding: 0.5rem 1rem;
 }
 
+.popup ul li {
+  font-size: 3vw;
+  font-weight: 600;
+  color: #3c3a39;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid #8993a4;
+}
+
 .first-project .languages li {
   color: #091e42;
   border: 1px solid #8993a4;
@@ -276,6 +284,12 @@ body.menu-open {
   line-height: 24px;
 }
 
+.popup p {
+  font-size: 4vw;
+  line-height: 6vw;
+  font-weight: 400;
+}
+
 .project .project-text p {
   line-height: 24px;
 }
@@ -301,6 +315,7 @@ body.menu-open {
   color: #091e42;
 }
 
+.languages,
 .project-text .languages {
   display: flex;
   gap: 4%;
@@ -308,6 +323,11 @@ body.menu-open {
 
 .about-me button {
   align-self: flex-start;
+}
+
+.buttons button {
+  padding-left: 5vw;
+  padding-right: 5vw;
 }
 
 .first-project .project-text button {
@@ -452,6 +472,77 @@ footer .footer-icons {
 
 /* ============ End Footer Section ============== */
 
+/* ============ Popup Section ============== */
+.popup {
+  position: fixed;
+  top: 7vh;
+
+  /* bottom: 7vh; */
+  height: fit-content;
+  max-height: 85vh;
+  overflow-y: scroll;
+  left: 5vw;
+  right: 5vw;
+  background-color: #fff;
+  z-index: 20;
+  width: 90vw;
+  margin: 0 auto;
+  padding: 5%;
+  display: grid;
+  row-gap: 5%;
+
+  /* display: none; */
+}
+
+.popup .close-popup {
+  cursor: pointer;
+}
+
+.popup > .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button img {
+  margin-left: 1vw;
+}
+
+.popup .popup-image,
+.popup-image img {
+  width: 100%;
+}
+
+.popup .title h2 {
+  font-size: 8vw;
+}
+
+.popup .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  height: fit-content;
+}
+
+.popup .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(5px);
+  z-index: 15;
+  display: none;
+}
+
+/* ============ End Popup Section ============== */
+
 @media (min-width: 768px) {
   button {
     padding: 2%;
@@ -511,12 +602,15 @@ footer .footer-icons {
     padding: 0.5rem 1.2vw;
   }
 
-  .menu ul li:last-child {
-    display: unset;
+  .popup ul li {
+    font-size: 15px;
+    font-weight: 600;
+    padding: 0.5rem 0.8rem;
+    height: fit-content;
   }
 
-  body.menu-open {
-    overflow: unset;
+  .menu ul li:last-child {
+    display: unset;
   }
 
   .close-menu {
@@ -579,6 +673,10 @@ footer .footer-icons {
     flex-direction: column;
     gap: 20px;
     padding: 2% 3%;
+  }
+
+  button img {
+    margin-left: 1vw;
   }
 
   .first-project .project-image img {
@@ -650,6 +748,12 @@ footer .footer-icons {
     width: 50%;
   }
 
+  .popup p {
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 400;
+  }
+
   .project .project-text p {
     font-size: 2vw;
     line-height: 2.8vw;
@@ -673,10 +777,19 @@ footer .footer-icons {
     font-weight: 400;
   }
 
+  .popup .languages {
+    gap: 0.8rem;
+    margin: 10px 0 30px 0;
+  }
+
   .other-projects:hover .project-text p,
   .other-projects:hover .project-text .languages,
   .other-projects:hover .project-text h3 {
     opacity: 0;
+  }
+
+  .buttons button {
+    padding: 0.6rem 1.4rem;
   }
 
   .other-projects .project-text button {
@@ -781,6 +894,59 @@ footer .footer-icons {
   }
 
   /* ============ End Contact Section ============== */
+
+  /* ============ Popup Section ============== */
+  .popup {
+    position: fixed;
+    top: 7vh;
+    height: 90vh;
+    overflow-y: scroll;
+    left: 10vw;
+    right: 10vw;
+    background-color: #fff;
+    z-index: 20;
+    width: 80vw;
+    margin: 0 auto;
+    padding: 2%;
+    gap: 0;
+  }
+
+  .popup .close-popup {
+    cursor: pointer;
+  }
+
+  .popup > .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .popup .popup-image {
+    width: 80%;
+  }
+
+  .popup .title h2 {
+    font-size: 32px;
+  }
+
+  .popup .content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    height: 90%;
+  }
+
+  .content .project-text {
+    width: 50%;
+    height: 100%;
+    justify-content: space-between;
+  }
+
+  .popup .buttons {
+    justify-content: flex-start;
+    gap: 5%;
+  }
 }
 
 @media (min-width: 1200px) {
