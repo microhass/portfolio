@@ -18,10 +18,12 @@ closeMenuIcon.addEventListener('click', () => {
   document.body.classList.remove('menu-open');
 });
 
-[...menuLinks].forEach((link) => link.addEventListener('click', () => {
-  menu.classList.remove('show-menu');
-  document.body.classList.remove('menu-open');
-}));
+[...menuLinks].forEach((link) =>
+  link.addEventListener('click', () => {
+    menu.classList.remove('show-menu');
+    document.body.classList.remove('menu-open');
+  })
+);
 
 const projects = [
   {
@@ -149,9 +151,10 @@ const firstProjectMarkup = `
   </div>`;
 
 const projectsMarkup = projects
-  .map((project, index) => (index === 0
-    ? ''
-    : `<div class="project other-projects">
+  .map((project, index) =>
+    index === 0
+      ? ''
+      : `<div class="project other-projects">
     <div class="project-image">
       <img
         src="${project.previewImage}"
@@ -166,22 +169,24 @@ const projectsMarkup = projects
       </p>
       <ul class="languages">
         ${project.technologies
-      .map((tech) => `<li>${tech}</li>`)
-      .join('')}
+          .map((tech) => `<li>${tech}</li>`)
+          .join('')}
       </ul>
       <button class="see-project" data-id="${index}" type="button">
         See project
       </button>
     </div>
-  </div>`))
+  </div>`
+  )
   .join('');
 
 document.addEventListener('DOMContentLoaded', () => {
   const projectsContainer = document.querySelector('.projects');
-  const otherProjsContainer = projectsContainer.querySelector('.others');
+  const otherProjsContainer =
+    projectsContainer.querySelector('.others');
   projectsContainer.insertAdjacentHTML(
     'afterbegin',
-    firstProjectMarkup,
+    firstProjectMarkup
   );
 
   otherProjsContainer.innerHTML = projectsMarkup;
@@ -202,8 +207,8 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
         <ul class="languages technologies">
         ${project.technologies
-    .map((tech) => `<li>${tech}</li>`)
-    .join('')}
+          .map((tech) => `<li>${tech}</li>`)
+          .join('')}
           
         </ul>
         <div class="content">
@@ -267,3 +272,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+const form = document.querySelector('form');
+const emailInput = document.querySelector('input[type=email]');
+const errorText = document.querySelector('.form-footer span');
