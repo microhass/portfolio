@@ -168,9 +168,7 @@ const projectsMarkup = projects
         ${project.summary}
       </p>
       <ul class="languages">
-        ${project.technologies
-          .map((tech) => `<li>${tech}</li>`)
-          .join('')}
+        ${project.technologies.map((tech) => `<li>${tech}</li>`).join('')}
       </ul>
       <button class="see-project" data-id="${index}" type="button">
         See project
@@ -182,12 +180,8 @@ const projectsMarkup = projects
 
 document.addEventListener('DOMContentLoaded', () => {
   const projectsContainer = document.querySelector('.projects');
-  const otherProjsContainer =
-    projectsContainer.querySelector('.others');
-  projectsContainer.insertAdjacentHTML(
-    'afterbegin',
-    firstProjectMarkup
-  );
+  const otherProjsContainer = projectsContainer.querySelector('.others');
+  projectsContainer.insertAdjacentHTML('afterbegin', firstProjectMarkup);
 
   otherProjsContainer.innerHTML = projectsMarkup;
 
@@ -206,9 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
         </div>
         <ul class="languages technologies">
-        ${project.technologies
-          .map((tech) => `<li>${tech}</li>`)
-          .join('')}
+        ${project.technologies.map((tech) => `<li>${tech}</li>`).join('')}
           
         </ul>
         <div class="content">
@@ -276,3 +268,16 @@ document.addEventListener('DOMContentLoaded', () => {
 const form = document.querySelector('form');
 const emailInput = document.querySelector('input[type=email]');
 const errorText = document.querySelector('.form-footer span');
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const userEmail = emailInput.value;
+  if (userEmail === userEmail.toLowerCase()) return form.submit();
+  emailInput.style.border = '1px solid red';
+  errorText.textContent = 'Please ensure the email is in lower case!';
+  setTimeout(() => {
+    emailInput.style.border = 'unset';
+    emailInput.style.borderBottom = '1px solid #DBD8D7';
+    errorText.textContent = '';
+  }, 5000);
+});
