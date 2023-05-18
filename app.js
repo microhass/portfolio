@@ -18,12 +18,10 @@ closeMenuIcon.addEventListener('click', () => {
   document.body.classList.remove('menu-open');
 });
 
-[...menuLinks].forEach((link) =>
-  link.addEventListener('click', () => {
-    menu.classList.remove('show-menu');
-    document.body.classList.remove('menu-open');
-  })
-);
+[...menuLinks].forEach((link) => link.addEventListener('click', () => {
+  menu.classList.remove('show-menu');
+  document.body.classList.remove('menu-open');
+}));
 
 const projects = [
   {
@@ -151,10 +149,9 @@ const firstProjectMarkup = `
   </div>`;
 
 const projectsMarkup = projects
-  .map((project, index) =>
-    index === 0
-      ? ''
-      : `<div class="project other-projects">
+  .map((project, index) => (index === 0
+    ? ''
+    : `<div class="project other-projects">
     <div class="project-image">
       <img
         src="${project.previewImage}"
@@ -168,20 +165,24 @@ const projectsMarkup = projects
         ${project.summary}
       </p>
       <ul class="languages">
-        ${project.technologies.map((tech) => `<li>${tech}</li>`).join('')}
+        ${project.technologies
+      .map((tech) => `<li>${tech}</li>`)
+      .join('')}
       </ul>
       <button class="see-project" data-id="${index}" type="button">
         See project
       </button>
     </div>
-  </div>`
-  )
+  </div>`))
   .join('');
 
 document.addEventListener('DOMContentLoaded', () => {
   const projectsContainer = document.querySelector('.projects');
   const otherProjsContainer = projectsContainer.querySelector('.others');
-  projectsContainer.insertAdjacentHTML('afterbegin', firstProjectMarkup);
+  projectsContainer.insertAdjacentHTML(
+    'afterbegin',
+    firstProjectMarkup,
+  );
 
   otherProjsContainer.innerHTML = projectsMarkup;
 
@@ -200,7 +201,9 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
         </div>
         <ul class="languages technologies">
-        ${project.technologies.map((tech) => `<li>${tech}</li>`).join('')}
+        ${project.technologies
+    .map((tech) => `<li>${tech}</li>`)
+    .join('')}
           
         </ul>
         <div class="content">
@@ -280,4 +283,5 @@ form.addEventListener('submit', (e) => {
     emailInput.style.borderBottom = '1px solid #DBD8D7';
     errorText.textContent = '';
   }, 5000);
+  return null;
 });
