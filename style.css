@@ -452,6 +452,21 @@ form textarea {
   font-style: italic;
 }
 
+.form-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-footer span {
+  width: 70%;
+  color: red;
+  text-align: right;
+  height: fit-content;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+}
+
 /* ============ End Contact Section ============== */
 
 /* ============ Footer Section ============== */

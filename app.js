@@ -267,3 +267,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+const form = document.querySelector('form');
+const emailInput = document.querySelector('input[type=email]');
+const errorText = document.querySelector('.form-footer span');
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const userEmail = emailInput.value;
+  if (userEmail === userEmail.toLowerCase()) return form.submit();
+  emailInput.style.border = '1px solid red';
+  errorText.textContent = 'Please ensure the email is in lower case!';
+  setTimeout(() => {
+    emailInput.style.border = 'unset';
+    emailInput.style.borderBottom = '1px solid #DBD8D7';
+    errorText.textContent = '';
+  }, 5000);
+  return null;
+});
