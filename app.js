@@ -285,3 +285,39 @@ form.addEventListener('submit', (e) => {
   }, 5000);
   return null;
 });
+
+const nameInput = document.querySelector('input[type=text]');
+const infoInput = document.querySelector('textarea');
+
+let formValue = {};
+
+const storeValues = (value) => {
+  localStorage.setItem('formValue', JSON.stringify(value));
+};
+
+const updateTypedValues = () => {
+  formValue = {
+    name: nameInput.value,
+    email: emailInput.value,
+    info: infoInput.value,
+  };
+
+  storeValues(formValue);
+};
+
+form.addEventListener('input', () => {
+  updateTypedValues();
+});
+
+window.addEventListener('load', () => {
+  formValue = JSON.parse(localStorage.getItem('formValue'));
+  const inputs = {
+    nameInput,
+    emailInput,
+    infoInput,
+  };
+  if (!formValue || Object.keys(formValue).length < 1) return;
+  Object.keys(formValue).forEach((key) => {
+    inputs[`${key}Input`].value = formValue[key];
+  });
+});
