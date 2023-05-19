@@ -308,3 +308,22 @@ const updateTypedValues = () => {
 form.addEventListener('input', () => {
   updateTypedValues();
 });
+
+
+window.addEventListener('load', () => {
+  formValue = JSON.parse(localStorage.getItem('formValue'));
+  const inputs = {
+    nameInput,
+    emailInput,
+    infoInput,
+  };
+  if (!formValue || Object.keys(formValue).length < 1) return;
+  Object.keys(formValue).forEach((key) => {
+    inputs[${key}Input].value = formValue[key];
+  });
+});
+
+
+
+
+
